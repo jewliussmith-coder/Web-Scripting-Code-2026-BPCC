@@ -1,0 +1,7 @@
+Web-Scripting Journal
+
+Where did you put your script tage? Why?
+
+I put my script tag near the end of my body tag. 
+Since the html reads everything in order, 
+I load the page and its contents first then give it its functionality from the javascript.
