@@ -1,0 +1,25 @@
+body{
+    background-color:gray
+}
+h1{
+    color:black;
+    text-align: center;
+
+}
+h2{
+    color:black;
+    text-align: center;
+}
+h3{
+    color:black;
+    text-align: center;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20%;
+    max-height: 20%;
+    border-color: black;
+}
+/*Nothin inportant here*/ 
