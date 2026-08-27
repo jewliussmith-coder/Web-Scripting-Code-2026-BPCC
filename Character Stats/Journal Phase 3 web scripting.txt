@@ -1,0 +1,3 @@
+Journal Phase 3 web scripting
+
+The purpose of a loop in this scenario is to repeat the same action multiple times without having to write the same code over and over. The loop adds 20 experience points for each day of training. If I wanted to simulate 100 days instead of 5, I would only need to change the condition from day <= 5 to day <= 100. This makes loops useful for repeating tasks efficiently.
