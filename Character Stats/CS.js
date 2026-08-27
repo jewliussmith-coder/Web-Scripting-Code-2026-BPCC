@@ -25,7 +25,7 @@ experiencePoints += 50;
 powerLevel = (currentHealth * 0.5) + (experiencePoints * 10);
 
 console.log("After Using Your Backpocket HP potion")
-console.log("Health" + currentHealth)
+console.log("Health " + currentHealth)
 console.log("Exp: "+ experiencePoints);
 console.log("Power Level:" + powerLevel);
 
@@ -36,3 +36,31 @@ for (let day = 1; day <= 5; day++){
 
 }
 console.log("After Training XP is now at: "+ experiencePoints)
+
+//TIME TO FIGHT 
+
+let bossHealth = 160
+
+console.log("==Big Boss Fight==")
+
+while (currentHealth > 0 && bossHealth > 0){
+    let heroDamage = Math.floor(Math.random() * 21) + 10; //generate a random number from 10 to 30
+    let bossDamage = Math.floor(Math.random() * 21) + 5; // 5 to 25
+
+    bossHealth -= heroDamage;
+    currentHealth -= bossDamage;
+
+    console.log("Hero dealt " + heroDamage + " damage.")
+    console.log("Boss dealt " + bossDamage + " damage.")
+    console.log("Hero HP: ", currentHealth);
+    console.log("Boss HP: ", bossHealth);
+
+
+}
+if (currentHealth <= 0 && bossHealth <= 0){
+    console.log("DRAW TRY AGAIN");
+} else if (currentHealth <= 0){
+    console.log("The Big Boss WINS!");
+} else {
+    console.log("You WIN!");
+}

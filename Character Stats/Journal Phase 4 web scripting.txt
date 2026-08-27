@@ -1,0 +1,3 @@
+Journal Phase 4 web scripting
+
+I used a while loop because I don't know exactly how many turns the boss fight will take. The loop continues as long as both the hero and the boss have health above zero. This is different from a for loop because a for loop is useful when I know how many times I want something to happen, like training for 5 days. A while loop is better here because the fight should continue until a condition is met, such as one of the characters being defeated.
