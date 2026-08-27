@@ -1,0 +1,3 @@
+Journal phase 1 webscripting.
+
+If I tried to change the character’s name later in the code, JavaScript would give me an error because the name was declared using const. Constants cannot be reassigned after they are created.
