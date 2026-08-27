@@ -1,0 +1,3 @@
+Journal Phase 2 web scripting
+
+Compound assignment operators like += make it easier to update a variable because they combine the math operation and assignment into one step. For example, currentHealth += 20 is the same as writing currentHealth = currentHealth + 20, but it is shorter and easier to read. This makes the code simpler when changing values such as health and experience.

@@ -1,0 +1,28 @@
+body{
+    background-color:gray
+}
+
+h1{
+    color:black;
+    text-align: center;
+
+}
+
+h2{
+    color:black;
+    text-align: center;
+}
+
+h3{
+    color:black;
+    text-align: center;
+}
+
+.image-container img{
+  max-width: 250px;         /* Spans the full width of the container */
+  max-height: 250px;        /* Spans the full height of the container */
+  object-fit: cover;   /* Fills the box without distorting the aspect ratio */
+  display: block;
+  margin: auto;
+}
+/*Nothin inportant here*/ 
