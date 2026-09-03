@@ -1,2 +1,2 @@
 Journal Phase 2
-When I tried to log defaultTaxRate outside of the function, I got an error because the variable was only available inside the calculateStoreTax function. This is because defaultTaxRate has local scope, meaning it can only be accessed within the function where it was created.
+Arrow functions are shorter than standard function expressions because they use the => symbol and can leave out the {} and return when there is only one expression. The concise implicit return made my code easier to read because there is less unnecessary syntax.
