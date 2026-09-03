@@ -1,0 +1,2 @@
+Journal Phase 1
+The main syntax difference is that a function declaration uses the function keyword followed by the function name, while a function expression assigns a function to a variable. In this case, calculatePrice is a function declaration, and getTax is a function expression stored in a variable.
