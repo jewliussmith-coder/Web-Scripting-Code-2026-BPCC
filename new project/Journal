@@ -1,2 +1,2 @@
-Journal Phase 2
-applyDiscount is considered a Higher-Order Function because it takes another function as a parameter and uses that function inside itself. studentDiscount and seniorDiscount were the callback functions that were passed into applyDiscount to determine which discount to apply. If I wanted to apply no discount, I could write a function that simply returns the total, such as function noDiscount(total) { return total; }.
+Journal Phase 5
+Breaking the order process into small, single-purpose functions made calculateFinalBill easier to write because each function already handled one specific part of the calculation. Instead of putting all the math into one long block of code, I could call each function step-by-step to calculate the subtotal, discount, tax, and final total.
