@@ -33,3 +33,13 @@ function seniorDiscount(total) {
 
 console.log(applyDiscount(100, studentDiscount));
 console.log(applyDiscount(100, seniorDiscount));
+
+
+function calculateFinalBill(price, quantity, discountCallback) {
+    let subtotal = calculatePrice(price, quantity);
+    let discountedPrice = applyDiscount(subtotal, discountCallback);
+    let taxAmount = getTax(discountedPrice, 0.07);
+    return discountedPrice + taxAmount;
+}
+
+console.log(calculateFinalBill(20, 3, studentDiscount));
