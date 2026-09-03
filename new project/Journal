@@ -1,2 +1,2 @@
-Journal Phase 1
-The main syntax difference is that a function declaration uses the function keyword followed by the function name, while a function expression assigns a function to a variable. In this case, calculatePrice is a function declaration, and getTax is a function expression stored in a variable.
+Journal Phase 2
+When I tried to log defaultTaxRate outside of the function, I got an error because the variable was only available inside the calculateStoreTax function. This is because defaultTaxRate has local scope, meaning it can only be accessed within the function where it was created.
