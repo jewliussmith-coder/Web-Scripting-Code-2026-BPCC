@@ -1,2 +1,2 @@
 Journal Phase 2
-Arrow functions are shorter than standard function expressions because they use the => symbol and can leave out the {} and return when there is only one expression. The concise implicit return made my code easier to read because there is less unnecessary syntax.
+applyDiscount is considered a Higher-Order Function because it takes another function as a parameter and uses that function inside itself. studentDiscount and seniorDiscount were the callback functions that were passed into applyDiscount to determine which discount to apply. If I wanted to apply no discount, I could write a function that simply returns the total, such as function noDiscount(total) { return total; }.
