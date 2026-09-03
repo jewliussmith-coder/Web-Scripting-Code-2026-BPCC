@@ -16,4 +16,20 @@ function calculateStoreTax(amount) {
 
 console.log(calculateStoreTax(100));
 
-console.log(defaultTaxRate);
+// console.log(defaultTaxRate);
+
+
+function applyDiscount(total, discountCallback) {
+    return discountCallback(total);
+}
+
+function studentDiscount(total) {
+    return total * 0.90;
+}
+
+function seniorDiscount(total) {
+    return total * 0.80;
+}
+
+console.log(applyDiscount(100, studentDiscount));
+console.log(applyDiscount(100, seniorDiscount));
