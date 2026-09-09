@@ -1,3 +1,3 @@
 Journal: 
 
-If you assign a value to a property that does not already exist, JavaScript automatically creates that property. This means you can create object properties when you first define the object or add them later using dot notation or bracket notation. This makes objects flexible because you can add new information as the program runs.
+The for...of loop gives me each item object from the receiptItems array. Inside the loop, I can use item.price to access just the price property and add it to the running subtotal. I can also use item.name to display the name of each food item.
