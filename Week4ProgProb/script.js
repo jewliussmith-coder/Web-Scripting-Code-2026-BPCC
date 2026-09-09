@@ -29,3 +29,18 @@ while (continueOrdering.toUpperCase() === "Y"){
 
 console.log(`Total items: ${receiptItems.length}`)
 console.log("Receipt Item: ", receiptItems);
+
+let subtotal = 0;
+
+for (const item of receiptItems){
+    console.log(`${item.name} -- $${item.price.toFixed(2)}`)
+    subtotal += item.price;
+}
+
+console.log(`Total food subtotal: $${subtotal.toFixed(2)}`);
+
+
+}
+
+console.log(`Total items: ${receiptItems.length}`)
+console.log("Receipt Item: ", receiptItems);
