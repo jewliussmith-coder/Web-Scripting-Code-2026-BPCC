@@ -39,8 +39,39 @@ for (const item of receiptItems){
 
 console.log(`Total food subtotal: $${subtotal.toFixed(2)}`);
 
+const removedItem = receiptItems.pop();
+
+if(removedItem){
+    console.log(`Removed item: ${removedItem.name}`);
+
+} else {
+    console.log("No items available to removed.");
 
 }
 
-console.log(`Total items: ${receiptItems.length}`)
-console.log("Receipt Item: ", receiptItems);
+subtotal = 0;
+
+for (const item of receiptItems) {
+    subtotal += item.price;
+}
+
+const grossSubtotal = subtotal + storeInfo.tableFee;
+
+const taxAmount = grossSubtotal * (storeInfo.taxRate / 100);
+
+const grandTotal = grossSubtotal + taxAmount;
+
+
+console.log("\nFINAL RECEIPT");
+console.log(`Store: ${storeInfo.name}`);
+console.log("\nItems:");
+
+for (const item of receiptItems) {
+    console.log(`${item.name} -- $${item.price.toFixed(2)}`);
+}
+
+console.log(`\nFood Subtotal: $${subtotal.toFixed(2)}`);
+console.log(`Table Fee: $${storeInfo.tableFee.toFixed(2)}`);
+console.log(`Subtotal: $${grossSubtotal.toFixed(2)}`);
+console.log(`Tax: $${taxAmount.toFixed(2)}`);
+console.log(`Grand Total: $${grandTotal.toFixed(2)}`);
