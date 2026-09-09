@@ -1,3 +1,3 @@
 Journal: 
 
-The for...of loop gives me each item object from the receiptItems array. Inside the loop, I can use item.price to access just the price property and add it to the running subtotal. I can also use item.name to display the name of each food item.
+Using .pop() removed the last object from the receiptItems array. When I recalculated the subtotal by looping through the array again, the removed item was no longer included, so the subtotal and final bill automatically changed. This makes it easy to modify the order because the calculations are based on the current contents of the array.
