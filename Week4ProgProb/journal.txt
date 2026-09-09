@@ -1,5 +1,3 @@
 Journal: 
 
-
-
-
+Grouping related information into an object keeps the code organized and makes it easier to manage. Instead of having separate variables for the store name, tax rate, and table fee, they can all be accessed through storeInfo, such as storeInfo.name or storeInfo.taxRate. This also makes the code easier to maintain because all of the store's information is kept together.
