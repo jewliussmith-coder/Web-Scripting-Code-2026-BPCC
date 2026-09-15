@@ -1,3 +1,3 @@
-Phase 2 (actual)
+Phase 3 
 
-getElementById returned one specific poem because an ID should be unique on the page. My group selection returned multiple poem elements from the West Wall because querySelectorAll selected all of the article elements inside that wall.
+I did not have to manually delete the poem from the first wall. When I called appendChild(), the existing node was automatically removed from its old parent and moved to the new parent in the DOM tree. The poem kept all of its content and ID while changing locations.
