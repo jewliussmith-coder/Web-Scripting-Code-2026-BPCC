@@ -1,0 +1,3 @@
+Phase 1
+
+getElementById returned one specific poem because an ID should be unique on the page. My group selection returned multiple poem elements from the West Wall because querySelectorAll selected all of the article elements inside that wall.
