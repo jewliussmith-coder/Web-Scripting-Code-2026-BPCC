@@ -1,3 +1,3 @@
-Phase 3 
+Phase 4
 
-I did not have to manually delete the poem from the first wall. When I called appendChild(), the existing node was automatically removed from its old parent and moved to the new parent in the DOM tree. The poem kept all of its content and ID while changing locations.
+An element created with document.createElement() exists in memory first and is not visible on the page. I created the poem and its child elements, set their content and style, and then used appendChild() to add the poem to a wall. The element becomes visible on the page when it is added to the DOM.
