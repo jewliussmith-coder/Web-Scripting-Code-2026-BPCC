@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Gallery</title>
+</head>
+<body>
+
+```
+<h1>Poetry Gallery</h1>
+
+<!-- West Wall -->
+<div id="wall-west">
+    <h2>West Wall</h2>
+
+    <article id="poem-morning">
+        <h3>Morning</h3>
+        <p>
+            The sun comes up,<br>
+            The sky turns bright,<br>
+            A brand new day<br>
+            Begins with light.
+        </p>
+    </article>
+
+    <article id="poem-rain">
+        <h3>Rain</h3>
+        <p>
+            Drip drop falls,<br>
+            Across the ground,<br>
+            Tiny silver drops<br>
+            Make a gentle sound.
+        </p>
+    </article>
+</div>
+
+<!-- East Wall -->
+<div id="wall-east">
+    <h2>East Wall</h2>
+
+    <article id="poem-stars">
+        <h3>Stars</h3>
+        <p>
+            Stars above,<br>
+            Shining bright,<br>
+            Little sparks<br>
+            Across the night.
+        </p>
+    </article>
+
+    <article id="poem-ocean">
+        <h3>Ocean</h3>
+        <p>
+            Waves roll in,<br>
+            Waves roll out,<br>
+            The ocean sings<br>
+            Without a doubt.
+        </p>
+    </article>
+</div>
+
+<!-- Submission Station -->
+<div id="submission-station">
+    <h2>Submit a New Poem</h2>
+
+    <label for="poem-title">Poem Title:</label>
+    <input type="text" id="poem-title">
+
+    <br><br>
+
+    <label for="poem-lines">Poem Lines:</label>
+    <textarea id="poem-lines" rows="6" cols="40"></textarea>
+
+    <br><br>
+
+    <label for="poem-color">Background Color:</label>
+    <input type="color" id="poem-color" value="#ffffff">
+
+    <br><br>
+
+    <label for="wall-select">Choose a Wall:</label>
+    <select id="wall-select">
+        <option value="wall-west">West Wall</option>
+        <option value="wall-east">East Wall</option>
+    </select>
+
+    <br><br>
+
+    <button id="add-poem">Add Poem</button>
+</div>
+```
+
+</body>
+</html>
