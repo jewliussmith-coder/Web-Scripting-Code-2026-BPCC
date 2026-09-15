@@ -1,3 +1,3 @@
-Phase 1 (actual)
+Phase 2 (actual)
 
-I used div elements with unique IDs to separate the West Wall and East Wall. I used article elements for each poem and gave every poem its own unique ID. The IDs are important because JavaScript can use them to find and change specific walls or poems later. I also gave the input controls their own IDs so JavaScript can get the information entered by the user.
+getElementById returned one specific poem because an ID should be unique on the page. My group selection returned multiple poem elements from the West Wall because querySelectorAll selected all of the article elements inside that wall.
