@@ -1,2 +1,2 @@
-Journal Phase 1
-I am passing data from one then() call to another by returning the result of response.json() from the first then(). The parsed JSON data is then passed into the second then(), where I can use it and log it to the console.
+Journal Phase 2
+A Promise represents the future result of an asynchronous operation, such as getting data from the dictionary API. If the API is down or the URL is wrong, the request can fail and the Promise is rejected. The .catch() block handles the error and displays a message instead of allowing the program to break.
