@@ -1,2 +1,2 @@
-Journal Phase 2
-A Promise represents the future result of an asynchronous operation, such as getting data from the dictionary API. If the API is down or the URL is wrong, the request can fail and the Promise is rejected. The .catch() block handles the error and displays a message instead of allowing the program to break.
+Journal Phase 3
+Using the Fetch API to update only part of the page improves the user experience because the entire page does not have to reload every time the user searches for a word. The results can appear quickly in the result section while the rest of the page stays the same, making the application feel faster and more interactive.
