@@ -1,0 +1,2 @@
+Journal Phase 1
+I am passing data from one then() call to another by returning the result of response.json() from the first then(). The parsed JSON data is then passed into the second then(), where I can use it and log it to the console.
