@@ -1,2 +1,2 @@
-Journal Phase 3
-Using the Fetch API to update only part of the page improves the user experience because the entire page does not have to reload every time the user searches for a word. The results can appear quickly in the result section while the rest of the page stays the same, making the application feel faster and more interactive.
+Journal Phase 4
+I prefer using async/await because it is easier for me to read and understand. The code looks more like a normal step-by-step process, since I can await the response and then await the JSON data before working with it. The then() calls work, but async/await feels less complicated when there are multiple asynchronous steps.
