@@ -10,7 +10,7 @@ function randomColor() {
     return `rgb(${r},${g},${b})`;
 }
 
-setInterval(() => {
+const panelTimer = setInterval(() => {
     panel1.style.backgroundColor = randomColor();
     panel2.style.backgroundColor = randomColor();
 }, 1500);
@@ -24,7 +24,19 @@ dancer.addEventListener("click", (event) => {
     dancer.textContent = dancer.textContent === "🕺" ? "💃" : "🕺";
 });
 
-//experimented with putting script.js into html. its a lot of work.
-
+window.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowUp") {
+        dancer.textContent = "🕴️";
+    } else if (event.key === "ArrowDown") {
+        dancer.textContent = "💃";
+    } else if (event.key === "ArrowLeft") {
+        dancer.textContent = "🕺";
+    } else if (event.key === "ArrowRight") {
+        dancer.textContent = "🪩";
+    } else if (event.key.toLowerCase() === "r") {
+        floor.style.backgroundColor = "black";
+        clearInterval(panelTimer);
+    }
+});
 
 
