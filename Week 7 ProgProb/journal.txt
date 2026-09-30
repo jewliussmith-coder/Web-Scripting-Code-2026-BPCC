@@ -1,0 +1,5 @@
+I used setInterval to run a function every 1.5 seconds that changes the background color of both panels. I generated each RGB value using Math.floor(Math.random() * 255) and combined the values into an rgb() string. Using a consistent interval keeps the lighting changes happening at a steady pace instead of changing randomly or too quickly.
+
+
+
+

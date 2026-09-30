@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Silent Disco</title>
+    <style>
+        #dance-floor {
+            width: 600px;
+            height: 400px;
+            background-color: black;
+            position: relative;
+        }
+
+        .panel {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        #panel1 {
+            background-color: red;
+        }
+
+        #panel2 {
+            background-color: blue;
+        }
+
+        #dancer {
+            position: absolute;
+            top: 180px;
+            left: 280px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="dance-floor">
+        <div id="panel1" class="panel"></div>
+        <div id="panel2" class="panel"></div>
+        <span id="dancer">🕺</span>
+    </div>
+
+    <script>
+        const panel1 = document.getElementById("panel1");
+        const panel2 = document.getElementById("panel2");
+
+        function randomColor() {
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+            return `rgb(${r},${g},${b})`;
+        }
+
+        setInterval(() => {
+            panel1.style.backgroundColor = randomColor();
+            panel2.style.backgroundColor = randomColor();
+        }, 1500);
+    </script>
+
+</body>
+</html>
