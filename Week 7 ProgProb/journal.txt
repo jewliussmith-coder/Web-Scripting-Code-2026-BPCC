@@ -1,7 +1,6 @@
-Phase 2
+Phase 3
 
-Event bubbling is when an event starts on the element that was clicked and then moves up through its parent elements. Since the Dancer is inside the Dance Floor, clicking the Dancer would normally also trigger the Floor's click event. stopPropagation() stops the event from moving up to the Floor, allowing the Dancer to have its own separate interaction.
-
+A global window listener is useful for keyboard shortcuts because it can detect key presses no matter which part of the page is currently focused. Held-down keys can be challenging because the browser may repeatedly fire keydown events, which can cause an action to happen many times instead of once.
 
 
 
