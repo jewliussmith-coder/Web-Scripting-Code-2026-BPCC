@@ -1,4 +1,9 @@
-I used setInterval to run a function every 1.5 seconds that changes the background color of both panels. I generated each RGB value using Math.floor(Math.random() * 255) and combined the values into an rgb() string. Using a consistent interval keeps the lighting changes happening at a steady pace instead of changing randomly or too quickly.
+Phase 2
+
+Event bubbling is when an event starts on the element that was clicked and then moves up through its parent elements. Since the Dancer is inside the Dance Floor, clicking the Dancer would normally also trigger the Floor's click event. stopPropagation() stops the event from moving up to the Floor, allowing the Dancer to have its own separate interaction.
+
+
+
 
 
 
