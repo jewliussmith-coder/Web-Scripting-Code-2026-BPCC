@@ -10,8 +10,11 @@ Phase 2:
 
 I used an array to collect all validation errors and display them together when the form is submitted. 
 This helps users see everything they need to fix at once instead of submitting the form repeatedly.
-However, displaying multiple errors at once can feel overwhelming,
-especially if there are many errors, while showing one at a time may be simpler but takes longer to correct everything.
+ However, displaying multiple errors at once can feel overwhelming,
+  especially if there are many errors, while showing one at a time may be simpler but takes longer to correct everything.
 
 
-
+Phase 3:
+In this phase, I added a success message for valid submissions and used localStorage to save the reviewer’s name so it remains available after refreshing the page. 
+LocalStorage is often simpler than cookies because it is easy to access with JavaScript and does not automatically send data with every HTTP request. 
+Cookies are more useful when a website needs to send information to a server, such as for session management and authentication.
