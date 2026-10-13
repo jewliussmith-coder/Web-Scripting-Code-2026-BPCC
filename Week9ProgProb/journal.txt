@@ -18,3 +18,9 @@ Phase 3:
 In this phase, I added a success message for valid submissions and used localStorage to save the reviewer’s name so it remains available after refreshing the page. 
 LocalStorage is often simpler than cookies because it is easy to access with JavaScript and does not automatically send data with every HTTP request. 
 Cookies are more useful when a website needs to send information to a server, such as for session management and authentication.
+
+Phase 4:
+
+During testing, I checked empty submissions, incorrect ratings, missing keywords, and valid reviews to make sure the validation worked correctly.
+I also refreshed the page to confirm that localStorage saved the reviewer’s name and displayed the welcome message. 
+One improvement I noticed was that the form could be cleared or hidden after a successful submission. 
