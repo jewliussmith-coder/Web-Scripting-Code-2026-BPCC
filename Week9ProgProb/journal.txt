@@ -1,0 +1,11 @@
+Phase 1:
+
+In this phase, I created a feedback form and used JavaScript to intercept its submission and log the name, 
+rating, and comments to the console. If I forget event.preventDefault(), 
+the browser will submit the form normally, which can refresh the page and clear the entered data. 
+Preventing the default behavior is necessary because there is no backend server to process the submission, 
+so JavaScript needs to handle it on the current page.
+
+
+
+

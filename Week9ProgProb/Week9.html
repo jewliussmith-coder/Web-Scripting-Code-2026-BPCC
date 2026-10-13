@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Submit Feedback</h1>
+
+    <form id="feedback-form" novalidate>
+        <label for="reviewer-name">Name:</label>
+        <input type="text" id="reviewer-name">
+
+        <br><br>
+
+        <label for="rating">Star Rating (1-5):</label>
+        <select id="rating">
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+        </select>
+
+        <br><br>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments"></textarea>
+
+        <br><br>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <div id="error-box"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
