@@ -6,6 +6,12 @@ the browser will submit the form normally, which can refresh the page and clear 
 Preventing the default behavior is necessary because there is no backend server to process the submission, 
 so JavaScript needs to handle it on the current page.
 
+Phase 2:
+
+I used an array to collect all validation errors and display them together when the form is submitted. 
+This helps users see everything they need to fix at once instead of submitting the form repeatedly.
+However, displaying multiple errors at once can feel overwhelming,
+especially if there are many errors, while showing one at a time may be simpler but takes longer to correct everything.
 
 
 
