@@ -1,11 +1,23 @@
 const form = document.getElementById("feedback-form");
 const errorBox = document.getElementById("error-box");
+const welcomeBox = document.getElementById("welcome-box");
+const successBox = document.getElementById("success-box");
+const nameInput = document.getElementById("reviewer-name");
+
+const savedName = localStorage.getItem("reviewerName");
+
+if (savedName) {
+    welcomeBox.textContent = `Welcome back, ${savedName}! Ready to submit another wonderful review?`;
+    nameInput.value = savedName;
+}
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
     errorBox.innerHTML = "";
+    successBox.textContent = "";
+    welcomeBox.textContent = "";
 
-    const name = document.getElementById("reviewer-name").value.trim();
+    const name = nameInput.value.trim();
     const rating = document.getElementById("rating").value;
     const comments = document.getElementById("comments").value;
 
@@ -29,9 +41,13 @@ form.addEventListener("submit", function(event) {
         return;
     }
 
+    localStorage.setItem("reviewerName", name);
+
+    successBox.textContent = `Thank you, ${name}! Your glowing review has been recorded.`;
+    successBox.style.color = "green";
+
     console.log("Reviewer Name:", name);
     console.log("Star Rating:", rating);
     console.log("Comments:", comments);
-    errorBox.style.color = "green";
-    errorBox.textContent = "Feedback submitted successfully!";
 });
+
