@@ -1,0 +1,8 @@
+Phase 1
+In this phase, I created a Pet class with a constructor that assigns each pet a name and type.
+I created two pet instances, Buddy and Mittens, using the new keyword and added a describe() method to return a sentence describing each pet. 
+
+The difference between a class and an instance is that a class is a blueprint used to create objects, 
+while an instance is an individual object created from that class. 
+For example, Pet is the class, and Buddy and Mittens are instances of that class. 
+Each pet has its own name and type, but both share the same structure and describe() method.

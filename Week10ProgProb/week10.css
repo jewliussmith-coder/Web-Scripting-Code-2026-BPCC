@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}
+
+h1 {
+  color: #336699;
+  margin-bottom: 30px;
+}
+
+.pet-card {
+  background-color: white;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #ccc;
+}
+
+.pet-card h2 {
+  color: #336699;
+}
+
+.pet-card p {
+  color: #555;
+  font-size: 16px;
+}
