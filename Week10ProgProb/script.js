@@ -1,8 +1,8 @@
 class Pet {
-  constructor(name, type) {
+  constructor(name, type = "Animal") {
     this.name = name;
     this.type = type;
-    this.hunger = 50; //Our generic named pets are getting HUNGRY
+    this.hunger = 50;
   }
 
   describe() {
@@ -11,42 +11,61 @@ class Pet {
 
   feed() {
     this.hunger -= 10;
-    //Prevent hunger from dropping below 0 for logic reasons :/
     if (this.hunger < 0) {
       this.hunger = 0;
     }
   }
 }
 
-const myPet = new Pet("Buddy", "Dog");
-const anotherPet = new Pet("Mittens", "Cat");
+
+const petsContainer = document.getElementById("pets-container");
+const petNameInput = document.getElementById("pet-name-input");
+const addPetBtn = document.getElementById("add-pet-btn");
 
 
-document.getElementById("pets").innerHTML = `
-  <div class="pet-card">
-    <h2>${myPet.name}</h2>
-    <p>${myPet.describe()}</p>
-  </div>
+function createPetCard(pet) {
+  
+  const card = document.createElement("div");
+  card.classList.add("pet-card");
 
-  <div class="pet-card">
-    <h2 ${anotherPet.name}</h2>
-    <p>${anotherPet.describe()}</p>
-  </div>
-`;
+ 
+  const nameHeading = document.createElement("h2");
+  nameHeading.textContent = pet.name;
+
+  const descP = document.createElement("p");
+  descP.textContent = pet.describe();
+
+  const hungerP = document.createElement("p");
+  hungerP.innerHTML = `Hunger Level: <span class="hunger-display">${pet.hunger}</span>`;
+
+  
+  const feedBtn = document.createElement("button");
+  feedBtn.textContent = "Feed Pet";
+
+  
+  feedBtn.addEventListener("click", () => {
+    pet.feed();
+    const hungerSpan = hungerP.querySelector(".hunger-display");
+    hungerSpan.textContent = pet.hunger;
+  });
+
+  
+  card.appendChild(nameHeading);
+  card.appendChild(descP);
+  card.appendChild(hungerP);
+  card.appendChild(feedBtn);
+
+  
+  petsContainer.appendChild(card);
+}
 
 
-console.log(myPet.describe());
-console.log(anotherPet.describe());
-
-
-const hungerDisplay = document.getElementById("hunger-display");
-const feedBtn = document.getElementById("feed-btn");
-
-
-hungerDisplay.textContent = myPet.hunger;
-
-feedBtn.addEventListener("click", () => {
-  myPet.feed();                         // Decrease hunger by 10
-  hungerDisplay.textContent = myPet.hunger; // Update the screen in javascript language 
-   // so random people cant figure out what it does
+addPetBtn.addEventListener("click", () => {
+  const name = petNameInput.value.trim();
+  
+  if (name !== "") {
+    const newPet = new Pet(name);       
+    createPetCard(newPet);             
+    petNameInput.value = "";           
+  }
 });
