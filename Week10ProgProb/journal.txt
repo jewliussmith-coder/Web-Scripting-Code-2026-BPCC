@@ -10,13 +10,13 @@ Each pet has its own name and type, but both share the same structure and descri
 
 Phase 2
 
-Quick summary:
+Quick recap:
 In this phase, I updated the Pet class to include a hunger property 
 initialized to 50 in the constructor, and added a feed() 
 method to decrease hunger by 10 (keeping it at a minimum of 0). 
 I connected the JavaScript logic to the HTML DOM so the user can interact with the pet in real-time.
 
-Answers:
+Answers
 The process of connecting my JavaScript class method to an HTML button involved selecting 
 the HTML display elements and button using document.getElementById(), 
 and attaching an event listener (.addEventListener('click', ...)) to the button. 
@@ -24,6 +24,28 @@ Whenever the user clicks the "Feed Pet" button, it triggers the pet's feed() met
 
 The most intuitive part of DOM manipulation was adding the event listener and updating .textContent,
 as the syntax clearly maps to real-world actions ("when clicked, update text"). 
+
+The most confusing part was realizing that changing an object's internal property (like this.hunger)
+does not automatically update what appears on the browser screen—you have to manually sync the DOM element's 
+content with the object's updated state inside the event listener function.
+
+Phase 3
+
+Quick recap:
+In Phase 3, I updated the project so the application can manage multiple pets instead of just one. 
+I added an input field for the pet's name and an "Add Pet" button to the HTML.
+In JavaScript, I created a function that reads the name entered by the user,
+creates a new Pet instance, dynamically generates a corresponding HTML card, and adds it to the page.
+
+Answers
+Moving from a single pet to a dynamic list changed how I structured the application.
+ Instead of writing fixed HTML elements for a single pet, 
+ I created a function that generates new pet cards on demand whenever the user enters a name.
+
+Using the Pet class made managing multiple pets much simpler.
+The class serves as a blueprint, ensuring every new pet object automatically starts with the same properties and functions.
+Because each pet object manages its own data, clicking the feed button on one pet card only updates the hunger level for that specific pet without affecting any others.
+
 
 The most confusing part was realizing that changing an object's internal property (like this.hunger)
 does not automatically update what appears on the browser screen—you have to manually sync the DOM element's 
