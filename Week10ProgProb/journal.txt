@@ -46,6 +46,23 @@ Using the Pet class made managing multiple pets much simpler.
 The class serves as a blueprint, ensuring every new pet object automatically starts with the same properties and functions.
 Because each pet object manages its own data, clicking the feed button on one pet card only updates the hunger level for that specific pet without affecting any others.
 
+Phase 4
+
+In Phase 4, 
+I completed the final validation of the Pet Sanctuary application by performing manual testing,
+verifying edge case handling for the hunger property, and ensuring proper state isolation across multiple dynamic objects.
+
+Answers:
+During testing, one unexpected behavior I caught was related to input handling: 
+if a user clicked the "Add Pet" button while the input field was empty, 
+the application would create a blank pet card with no name. 
+
+Another key observation during testing was confirming scope isolation.
+By attaching the event listener directly inside the card-creation function,
+I verified that clicking the feed button on any individual pet card accurately targeted only that specific object's
+hunger property and DOM element, preventing any cross-talk between multiple pet instances in the sanctuary.
+
+
 
 The most confusing part was realizing that changing an object's internal property (like this.hunger)
 does not automatically update what appears on the browser screen—you have to manually sync the DOM element's 
