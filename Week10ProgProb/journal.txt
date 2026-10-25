@@ -6,3 +6,25 @@ The difference between a class and an instance is that a class is a blueprint us
 while an instance is an individual object created from that class. 
 For example, Pet is the class, and Buddy and Mittens are instances of that class. 
 Each pet has its own name and type, but both share the same structure and describe() method.
+
+
+Phase 2
+
+Quick summary:
+In this phase, I updated the Pet class to include a hunger property 
+initialized to 50 in the constructor, and added a feed() 
+method to decrease hunger by 10 (keeping it at a minimum of 0). 
+I connected the JavaScript logic to the HTML DOM so the user can interact with the pet in real-time.
+
+Answers:
+The process of connecting my JavaScript class method to an HTML button involved selecting 
+the HTML display elements and button using document.getElementById(), 
+and attaching an event listener (.addEventListener('click', ...)) to the button. 
+Whenever the user clicks the "Feed Pet" button, it triggers the pet's feed() method and updates the .textContent property of the hunger display element to show the new hunger value.
+
+The most intuitive part of DOM manipulation was adding the event listener and updating .textContent,
+as the syntax clearly maps to real-world actions ("when clicked, update text"). 
+
+The most confusing part was realizing that changing an object's internal property (like this.hunger)
+does not automatically update what appears on the browser screen—you have to manually sync the DOM element's 
+content with the object's updated state inside the event listener function.
