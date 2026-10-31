@@ -1,0 +1,5 @@
+Journal:
+
+In phase 1, I created the basic foundation of my vault security system using JavaScript. I enabled "use strict"; at the top of my script, created an accessVault(key) function, and used an if/else statement to check whether the correct password was entered. I also tested the function with different keys to make sure it would grant access with the correct key and deny access with incorrect ones. This helped me understand how functions, conditions, and basic security checks work in JavaScript.
+
+"use strict"; is considered a safety net for developers because it helps catch common coding mistakes and prevents certain bad coding practices. For example, it prevents me from accidentally creating variables without declaring them first. This makes my code cleaner, more reliable, and easier to debug. Basically, it helps me catch mistakes early before they turn into bigger problems.
