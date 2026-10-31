@@ -1,16 +1,48 @@
 "use strict";
 
-function accessVault(key) {
-    if (key === "SECRET_123") {
-        return "Access Granted";
-    } else {
-        return "Access Denied";
+
+class InvalidKeyError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "InvalidKeyError";
+    }
+}
+
+class VaultLockedError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "VaultLockedError";
     }
 }
 
 
-console.log(accessVault("SECRET_123"));
-console.log(accessVault("WRONG_KEY"));
-console.log(accessVault("12345"));
-console.log(accessVault(""));
-console.log(accessVault(123));
+function accessVault(key) {
+    if (key === undefined || Number.isNaN(key)) {
+        throw new InvalidKeyError("Key is missing or corrupted");
+    } 
+    else if (key !== "SECRET_123") {
+        throw new VaultLockedError("Incorrect key provided");
+    } 
+    else {
+        return "Access Granted";
+    }
+}
+
+try {
+    console.log(accessVault("SECRET_123"));
+    console.log(accessVault("WRONG_KEY"));
+} catch (error) {
+    console.log(error.name + ": " + error.message);
+}
+
+try {
+    console.log(accessVault(undefined));
+} catch (error) {
+    console.log(error.name + ": " + error.message);
+}
+
+try {
+    console.log(accessVault(NaN));
+} catch (error) {
+    console.log(error.name + ": " + error.message);
+}
