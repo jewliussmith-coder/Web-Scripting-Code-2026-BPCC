@@ -97,3 +97,14 @@ runTest("Wrong key throws VaultLockedError", function() {
 attemptEntry("SECRET_123");
 attemptEntry("WRONG_KEY");
 attemptEntry(undefined);
+
+console.log("Testing different inputs:");
+
+attemptEntry("");
+attemptEntry(123);
+attemptEntry(null);
+attemptEntry({});
+attemptEntry([]);
+attemptEntry("SECRET_123");
+attemptEntry(undefined);
+attemptEntry(NaN);
