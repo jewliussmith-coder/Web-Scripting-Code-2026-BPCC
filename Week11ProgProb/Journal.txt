@@ -16,4 +16,8 @@ The finally block runs every time, even if an error happens, while the catch blo
 
 In phase 4, I created automated tests to make sure my vault security system works correctly. I tested the correct key, missing keys, corrupted keys, and incorrect keys to make sure each one produces the expected result. The tests show PASS or FAIL depending on whether the code works as expected.
 
+During phase 5, I tested my vault with different inputs to see if anything would break. I found that empty strings, numbers, null, objects, and arrays were treated as incorrect keys, while undefined and NaN triggered the missing or corrupted key error. Everything worked as expected, so I didn't feel the need to make any major changes.
+
+I also reviewed the code for possible improvements. One thing I learned is that testing different inputs helps find problems that I might not notice at first. Overall, this project helped me understand how JavaScript handles errors, how to test code, and how to make a program more reliable.
+
 Automated testing is more reliable than manual testing because it checks the same things consistently and helps catch mistakes faster. I also learned that when an error is thrown, the normal flow of the program stops and moves to the catch block, where the error can be handled. This helps prevent the program from crashing unexpectedly and makes it easier to find and fix problems.
