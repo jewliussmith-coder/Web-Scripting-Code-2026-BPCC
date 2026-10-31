@@ -28,21 +28,29 @@ function accessVault(key) {
     }
 }
 
-try {
-    console.log(accessVault("SECRET_123"));
-    console.log(accessVault("WRONG_KEY"));
-} catch (error) {
-    console.log(error.name + ": " + error.message);
+
+function attemptEntry(key) {
+    try {
+        console.log(accessVault(key));
+    } 
+    catch (e) {
+        if (e instanceof InvalidKeyError) {
+            console.log("Security Alert: System corruption detected.");
+        } 
+        else if (e instanceof VaultLockedError) {
+            console.log("User Error: Please try again.");
+        } 
+        else {
+            throw e;
+        }
+    } 
+    finally {
+        console.log("Vault attempt completed.");
+    }
 }
 
-try {
-    console.log(accessVault(undefined));
-} catch (error) {
-    console.log(error.name + ": " + error.message);
-}
 
-try {
-    console.log(accessVault(NaN));
-} catch (error) {
-    console.log(error.name + ": " + error.message);
-}
+attemptEntry("SECRET_123");
+attemptEntry("WRONG_KEY");
+attemptEntry(undefined);
+attemptEntry(NaN);
