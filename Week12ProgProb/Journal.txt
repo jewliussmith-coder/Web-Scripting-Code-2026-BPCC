@@ -26,3 +26,12 @@ The main difference between .test() and capturing groups is that .test() only ch
 
 This phase helped me understand how regular expressions can do more than validate information. They can also extract and reorganize data.
 
+Phase 4
+
+In this phase, I created a processRegistration() function that brings all my previous validation functions together into one registration system. It checks the user's name, username, and phone number, and collects any errors into an array. If something is invalid, the function returns a failure message with the specific errors. If everything is valid, it returns the user's information with the phone number formatted correctly and shows whether the promo code discount was applied.
+
+Looking back at the earlier phases, testing each regular expression separately made this phase much easier. Since I already had working validation and formatting functions, I could just call them inside the main function instead of rewriting all the regex patterns. It also made the code easier to organize, understand, and troubleshoot.
+
+Overall, this phase showed me how smaller functions can work together to create a complete registration system.
+
+
