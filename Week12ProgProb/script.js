@@ -14,6 +14,17 @@ function validatePromoCode(promo) {
     return /^SUMMER$/i.test(promo || "");
 }
 
+function formatPhoneNumber(phone) {
+    if (!validatePhone(phone)) {
+        return null;
+    }
+
+    return phone.replace(
+        /^(\d{3})[-.]?(\d{3})[-.]?(\d{4})$/,
+        "($1) $2-$3"
+    );
+}
+
 const sampleUsers = [
     {
         name: "Alex Johnson",
@@ -57,6 +68,7 @@ sampleUsers.forEach(user => {
     console.log("Name:", user.name, validateName(user.name));
     console.log("Username:", user.username, validateUsername(user.username));
     console.log("Phone:", user.phone, validatePhone(user.phone));
+    console.log("Formatted Phone:", formatPhoneNumber(user.phone));
     console.log("Promo Code:", user.promoCode, validatePromoCode(user.promoCode));
     console.log("-------------------------");
 });
