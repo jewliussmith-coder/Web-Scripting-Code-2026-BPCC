@@ -34,4 +34,10 @@ Looking back at the earlier phases, testing each regular expression separately m
 
 Overall, this phase showed me how smaller functions can work together to create a complete registration system.
 
+Phase 5
+
+I tested my completed program using the sample users and additional edge cases. I checked usernames with special characters, usernames at the minimum and maximum lengths, and phone numbers with extra spaces. The tests worked as expected, and invalid inputs were rejected.
+I also used chatgpt to review my code. I didn't make any changes because my existing code already handled the requirements correctly.
+
+
 
