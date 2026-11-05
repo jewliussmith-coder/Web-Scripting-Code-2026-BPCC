@@ -8,3 +8,11 @@ The biggest thing I learned was how important the ^ and $ anchors are. Without t
 This phase helped me understand how regular expressions can make validating user input easier and more reliable.
 
 
+
+Phase 2
+
+In this phase, I added two more validation functions using regular expressions. The phone validation checks that phone numbers contain exactly 10 digits and allows hyphens, periods, or no separators. The promo code validation checks whether the user entered SUMMER, regardless of capitalization.
+
+One thing I learned was how useful the case-insensitive flag (i) is. Instead of converting every string to lowercase with .toLowerCase() or writing multiple conditions for different capitalization, I can just add i to the regular expression. This makes the code shorter, cleaner, and easier to understand.
+
+This phase helped me understand how regular expressions can validate different types of user input while keeping the code simple.
