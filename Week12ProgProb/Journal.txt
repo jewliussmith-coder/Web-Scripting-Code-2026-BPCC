@@ -16,3 +16,13 @@ In this phase, I added two more validation functions using regular expressions. 
 One thing I learned was how useful the case-insensitive flag (i) is. Instead of converting every string to lowercase with .toLowerCase() or writing multiple conditions for different capitalization, I can just add i to the regular expression. This makes the code shorter, cleaner, and easier to understand.
 
 This phase helped me understand how regular expressions can validate different types of user input while keeping the code simple.
+
+
+Phase 3
+
+In this phase, I created a function called formatPhoneNumber() that takes a valid phone number and reformats it into a standard format. I used three capturing groups to separate the area code, exchange, and line number. Then I used .replace() with $1, $2, and $3 to put the numbers into the correct format.
+
+The main difference between .test() and capturing groups is that .test() only checks whether a string matches a regular expression and returns true or false. Capturing groups allow me to take specific parts of a matching string and reuse them. This makes it possible to actually change the way information is displayed instead of just checking if it is valid.
+
+This phase helped me understand how regular expressions can do more than validate information. They can also extract and reorganize data.
+
