@@ -25,6 +25,39 @@ function formatPhoneNumber(phone) {
     );
 }
 
+function processRegistration(user) {
+    const errors = [];
+
+    if (!validateName(user.name)) {
+        errors.push("Invalid name");
+    }
+
+    if (!validateUsername(user.username)) {
+        errors.push("Invalid username");
+    }
+
+    if (!validatePhone(user.phone)) {
+        errors.push("Invalid phone");
+    }
+
+    if (errors.length > 0) {
+        return {
+            success: false,
+            errors: errors
+        };
+    }
+
+    return {
+        success: true,
+        data: {
+            name: user.name,
+            username: user.username,
+            phone: formatPhoneNumber(user.phone),
+            discountApplied: validatePromoCode(user.promoCode)
+        }
+    };
+}
+
 const sampleUsers = [
     {
         name: "Alex Johnson",
@@ -64,11 +97,11 @@ const sampleUsers = [
     }
 ];
 
-sampleUsers.forEach(user => {
-    console.log("Name:", user.name, validateName(user.name));
-    console.log("Username:", user.username, validateUsername(user.username));
-    console.log("Phone:", user.phone, validatePhone(user.phone));
-    console.log("Formatted Phone:", formatPhoneNumber(user.phone));
-    console.log("Promo Code:", user.promoCode, validatePromoCode(user.promoCode));
-    console.log("-------------------------");
+sampleUsers.forEach((user, index) => {
+    console.log(`Registration ${index + 1}:`);
+
+    const result = processRegistration(user);
+
+    console.log(result);
+    console.log("------------");
 });
