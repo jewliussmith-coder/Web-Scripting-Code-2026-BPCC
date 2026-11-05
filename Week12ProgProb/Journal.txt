@@ -1,0 +1,10 @@
+Journal
+
+Phase 1
+In this phase, I created two validation functions using regular expressions. The first function checks that names only contain English letters and spaces and are at least two characters long. The second function checks that usernames are between 3 and 12 characters and only contain letters, numbers, and underscores.
+
+The biggest thing I learned was how important the ^ and $ anchors are. Without them, a regular expression could find a matching section somewhere inside a longer username and still return true. Adding both anchors makes sure the entire username is checked, so it follows the length and character requirements.
+
+This phase helped me understand how regular expressions can make validating user input easier and more reliable.
+
+
