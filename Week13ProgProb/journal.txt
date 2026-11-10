@@ -13,3 +13,6 @@ Phase 1 Journal
 Using .filter() and .map() is an example of abstraction because they handle the looping process for us.
 Instead of writing a longer for loop, we can use these methods to get the results we want with fewer lines of code. 
 This makes the code easier to read, understand, and maintain.
+
+Phase 2 Journal
+Using the terminal was a little confusing at first, but the process became easier once I started following the commands. One thing that surprised me was how quickly Vite created the React project and set everything up. The .gitignore file is important because it prevents unnecessary files like node_modules from being uploaded to GitHub, keeping the project smaller and more organized. 
