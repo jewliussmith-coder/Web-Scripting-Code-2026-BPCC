@@ -1,0 +1,9 @@
+Phase 0: Blueprint
+My plan for this project is to start by putting all the game information into an array so everything is organized. Each game will have a title, genre, ID, and favorite status. 
+Then I'll use JavaScript to sort through the games and find things like the game titles and which ones are marked as favorites. After that, I'll work on getting the games to show up on a webpage and making them look nice. I also want to make it easy for users to filter the games so they can see only their favorites. My goal is to turn a simple list of games into a website that looks good and is easy to use.
+
+Journal
+The part I'm most confused about right now is how all the code will work together to make the website.
+I'm not really sure how React connects to the game information yet, but I think I'll understand it better once I start working on it.
+The part I'm most confident about is organizing the game information because that seems pretty straightforward.
+I think putting everything together will most likely be the hardest part.
