@@ -7,3 +7,9 @@ The part I'm most confused about right now is how all the code will work togethe
 I'm not really sure how React connects to the game information yet, but I think I'll understand it better once I start working on it.
 The part I'm most confident about is organizing the game information because that seems pretty straightforward.
 I think putting everything together will most likely be the hardest part.
+
+
+Phase 1 Journal
+Using .filter() and .map() is an example of abstraction because they handle the looping process for us.
+Instead of writing a longer for loop, we can use these methods to get the results we want with fewer lines of code. 
+This makes the code easier to read, understand, and maintain.
